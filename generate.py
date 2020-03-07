@@ -178,6 +178,7 @@ def main():
         raw_text = args.prefix
         context_tokens = tokenizer.convert_tokens_to_ids(tokenizer.tokenize(raw_text))
         generated = 0
+        samples_file.write('args:\n' + args.__repr__() + '\n')
         for _ in range(nsamples // batch_size):
             out = generate(
                 n_ctx=n_ctx,

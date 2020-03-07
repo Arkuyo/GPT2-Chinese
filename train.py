@@ -77,6 +77,7 @@ def main():
         from tokenizations import tokenization_bert
 
     os.environ["CUDA_VISIBLE_DEVICES"] = args.device  # 此处设置程序使用哪些显卡
+    # os.environ["CUDA_VISIBLE_DEVICES"] = '2, 3'  # 此处设置程序使用哪些显卡
 
     model_config = transformers.modeling_gpt2.GPT2Config.from_json_file(args.model_config)
     print('config:\n' + model_config.to_json_string())

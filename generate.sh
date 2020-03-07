@@ -1,8 +1,12 @@
 python generate.py \
   --device 0 \
-  --length 900 \
-  --tokenizer_path cache/vocab_small.txt \
+  --length 100 \
+  --tokenizer_path cache/vocab_user.txt \
   --model_path model/final_model \
-  --prefix "[CLS][MASK]" \
+  --nsamples=4 \
+  --prefix "只剩下钢琴" \
   --topp 1 \
-  --temperature 1.0
+  --temperature 0.8 \
+  --fast_pattern \
+  --save_samples \
+  --save_samples_path sample/
